@@ -1,0 +1,5 @@
+// Monitor changes
+    initial begin
+        $monitor("Time=%0t en=%b wr_en=%b wr_addr=%h wr_data=%h rd1=%h rd2=%h", 
+                 $time, en, wr_en, wr_addr, wr_data, rd_data1, rd_data2);
+    end
