@@ -1,5 +1,6 @@
 # Low-Power-Dual-Read-RAM-2R1W
 Dual Read, Single Write(2R1W)64x8 RAM in Verilog with clock gating and active-low reset.
+
 ->Overview
 This project implements a Dual-Read, Single-Write (2R1W) RAM in Verilog HDL.
 Size: 64 words × 8 bits
