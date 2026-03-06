@@ -1,5 +1,5 @@
 // Dual Read, Single Write RAM with clock gating and reset (64x8)
-module RAM_2R1W(
+module LPDR(
     input [7:0] wr_data,           
     input [5:0] wr_addr,           
     input [5:0] rd_addr1,          
@@ -73,7 +73,7 @@ module RAM_2R1W(
 endmodule
 
 //Test_bench
-module RAM_2R1W_tb;
+module LPDR_tb;
     // Testbench signals
     reg [7: 0] wr_data;
     reg [5: 0] wr_addr;
@@ -88,7 +88,7 @@ module RAM_2R1W_tb;
     integer i;
 
 // Instantiate RAM module
-    RAM_2R1W ram_inst (
+    LPDR ram_inst (
         .wr_data(wr_data),
         .wr_addr(wr_addr),
         .rd_addr1(rd_addr1),
