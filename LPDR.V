@@ -82,6 +82,7 @@ module LPDR_tb;
     reg wr_en;
     reg clk;
     reg en;
+    reg rst_n;
     wire [7: 0] rd_data1;
     wire [7: 0] rd_data2;
     
@@ -96,9 +97,11 @@ module LPDR_tb;
         .wr_en(wr_en),
         .clk(clk),
         .en(en),
+        .rst_n(rst_n),
         .rd_data1(rd_data1),
         .rd_data2(rd_data2)
     );
+
 
     // Clock generation
     initial begin
@@ -119,7 +122,11 @@ module LPDR_tb;
         rd_addr2 = 0;
         wr_en = 0;
         en = 0;
-        
+        rst_n=0;
+
+       // Apply reset
+        #12;
+        rst_n = 1;
         // Wait for a few clock cycles
         repeat(3) @(posedge clk);
 
