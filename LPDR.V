@@ -109,8 +109,8 @@ module RAM_2R1W_tb;
     // Test stimulus
     initial begin
         // VCD file generation
-        $dumpfile("ram_2r1w.vcd");
-        $dumpvars(0, RAM_2R1W_tb);
+       // $dumpfile("ram_2r1w.vcd");
+       // $dumpvars(0, RAM_2R1W_tb);
 
 // Initialize signals
         wr_data = 0;
